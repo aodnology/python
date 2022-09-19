@@ -33,19 +33,17 @@ fig.show()
 start_date = datetime(2020,9,14)
 end_date = datetime(2021,9,14)
 
-
+#카카오
 kakao = data.get_data_yahoo("035720.ks", start_date, end_date)
 
-kakao = kakao.reset_index() # Date index를 Column으로 보내주기 위함
+kakao = kakao.reset_index() 
 
-# plotly 캔들스틱 그래프 그리기
 stock_name = '카카오'
 fig = go.Figure(data=[go.Candlestick(x=kakao['Date'],
                                     open=kakao['Open'],
                                     high=kakao['High'],
                                     low=kakao['Low'],
                                     close=kakao['Close'])])
-# x축 type을 카테고리 형으로 설정, 순서를 오름차순으로 날짜순서가 되도록 설정
 fig.layout = dict(title=stock_name, 
                        xaxis = dict(type="category", 
                                     categoryorder='category ascending'))
