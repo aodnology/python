@@ -53,8 +53,34 @@ print('7. ')
 a = 'python'
 print(a * 4)
 
-print('7-1. ')
+print('7-2. ')
 #문자열 곱하기 응용
 
-print("=" * 50); print("my program"); print("="*50) 
+print("=" * 50); print("my program"); print("="*50)
 # print문 여러개를 한줄로 사용할때는 세미콜론(;)을 찍어사용가능
+
+print('8. ')
+# 문자열 인덱싱과 슬라이싱
+# 인덱싱 : 무엇인가를 가리킴
+# 슬라이싱 : 무언인가를 잘라냄
+
+a = "Life is too short, You need Python"
+print(a[0],a[-0],a[3],a[-1]) # 변수[-n] : 뒤에서 n번째 문자를 가져옴 , 인덱싱 활용 예제
+
+print('8-2. ')
+# 단어 뽑아내기
+# 슬라이싱 활용 예제
+
+print(a[0:4], a[5:7], a[12:17]) # 변수[시작번호:끝번호] , 결과 : Life
+print(a[19:]) # 끝번호를 생략하면 시작 인덱싱 번호부터 문자열을 끝까지 뽑아냄
+print(a[:17]) # 시작번호를 생략하면 처음부터 끝 번호가지 뽑아냄
+print(a[:]) # 시작번호와 끝번호가 없으면 print(a)와 결과가 같음 
+
+print('8-3. ')
+#슬라이싱으로 문자열 나누기
+
+a = "20010331Rainy"
+date = a[:8]        # a[8] 포함 X
+weather = a[8:]     # a[8] 포함 O
+print(date, weather)
+
