@@ -84,3 +84,60 @@ date = a[:8]        # a[8] 포함 X
 weather = a[8:]     # a[8] 포함 O
 print(date, weather)
 
+print('9. ')
+# 문자열 포매팅
+
+a = "I eat %d apples." %3      # 숫자
+print(a)
+a = "I eat %s apples." %"five" # 문자열
+print(a)
+
+print('10. ')
+# 변수로 대입
+num = 3
+print("I eat %d apples." %num)
+
+#응용
+num = 10
+fruit = "apples."
+print("I eat %d %s" %(num,fruit))
+#문자열과 숫자열을 한꺼번에 대입할때 %(변수,변수) 형태로 넣어준다
+
+print('11. ')
+#문자 개수 세기(count)
+a = "hobby"
+print(a.count("b")) 
+# 변수명.함수명() 형태로 사용하면 변수에 해당 함수의 기능이 실행된다
+
+# 위치 찾기 (find)
+print("11-2")
+a = "Python is best choice"
+print(a.find('b'))
+print(a.find('k'))
+
+#위치 찾기(index)
+print("11-3. ")
+a = "Life is too short"
+print(a.index("t"))
+#print(a.index("k"))
+
+# find와 index의 차이점
+# find : 값이 없으면 -1로 반환
+# index: 값이 없으면 오류 발생
+
+#문자열 삽입(join)
+print("11-4. ")
+a = ","
+print(a.join('abcd'))
+# 각 문자 사이에 ',' 를 삽입 : a,b,c,d
+
+#소문자를 대문자로 변경(upper)
+print('11-5. ')
+a = "hi"
+print(a.upper())
+
+#대문자를 소문자로 변경(lower)
+print('11-6. ')
+a = "HI"
+print(a.lower())
+
