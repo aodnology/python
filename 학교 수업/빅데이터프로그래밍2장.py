@@ -141,3 +141,23 @@ print('11-6. ')
 a = "HI"
 print(a.lower())
 
+#양쪽 공백 지우기 (strip)
+#오른쪽 공백 지우기 (rstrip)
+#왼쪽 공백 지우기 (lstrip)
+print('11-7. ')
+a = " hi "
+print(a.strip())
+print(a.rstrip())
+print(a.lstrip())
+
+#문자열 바꾸기 (replace)
+a = "Life is too short"
+print(a.replace("Life", "Your leg")) #Life가 Your leg로 바뀜
+
+#문자열 나누기 (split)
+a = "life is too short"
+a.split() # 괄호 안에 아무런 값도 넣지 않으면 공백 기준으로 문자열이 나누어짐
+print(a.split())
+
+a = 'a:b:c:d'
+print(a.split(":"))# ':' 기준으로 문자열을 나눈다
