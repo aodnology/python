@@ -149,3 +149,11 @@ print(a)
 b = [6,7]
 a.extend(b)
 print(a)
+
+print('18. ')
+#튜플 (tuple)
+#튜플은 요소값 수정 ,삭제 및 변경이 불가능
+t1 = (1, 2, 'a','b')
+t2 = (3, 4)
+th = t1+t2
+print(th)
