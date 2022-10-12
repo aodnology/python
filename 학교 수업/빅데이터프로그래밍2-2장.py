@@ -155,5 +155,64 @@ print('18. ')
 #튜플은 요소값 수정 ,삭제 및 변경이 불가능
 t1 = (1, 2, 'a','b')
 t2 = (3, 4)
+
+print('18-2. ')
+#튜플 연산
 th = t1+t2
-print(th)
+print(th)     # (1,2,'a','b',3,4)
+print(t2 * 3) # (3,4,3,4,3,4)
+
+print('18-3. ')
+#튜플 인덱싱
+t1 = (1,2,'a','b')
+print(t1[0])
+print(t1[3])
+
+#튜플 슬라이싱
+t1 = (1,2,'a','b')
+print(t1[1:])
+
+print('19. ')
+#딕셔너리 자료형 {}
+#java collection framework의 Map과 같이 key, value 값을 가진다
+
+dic = {'name' : 'sooho', 'phone' : '112', 'birth' : '05/23'}
+print(dic['name'])
+print(dic['phone'])
+
+a = {3:'three', 2:'two', 1 :'one'}
+del a[2] # []안에 입력된 key : value값이 삭제된다.
+print(a)
+
+#딕셔너리 key값 가져오기
+print(a[1])
+print(a.get(1))
+# a[x]와 a.get(x)의 결과값 모두 x에 해당하는 value 값을 가져온다
+# 차이점
+# a[x]의 경우 x에 해당하는 key값이 없는 경우 오류가 발생
+# a.get(x)의 경우 x에 해당하는 key값이 없는 경우 None을 return
+
+print('20. ')
+#딕셔너리 관련함수
+a = {'교수' : '김영운', '과목' : '파이썬', '수업요일' : '수요일'}
+
+# keys() : key 리스트를 생성
+# 변수.keys()
+print(a.keys())
+
+# dict_keys 객체는 리스트 고유함수 사용 불가능
+# 리스트 고유 함수 : append(), insert(), pop(), remove(), sort()
+
+# values() : value 리스트 생성
+print(a.values())
+
+for k in a.values():
+    print(k)
+
+# items() : 딕셔너리 자료 key, value 모두 얻기
+print(a.items()) # 튜플로 묶은 값을 dict_items 객체로 돌려줌
+
+# clear() : 딕셔너리 모두 지우기
+a.clear()
+print(a)
+
