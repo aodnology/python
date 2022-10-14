@@ -232,3 +232,100 @@ s1 = set([1,2,3])
 l1 = list(s1)       # 집합자료형을 리스트 자료형으로 변환
 print(l1)
 
+print('22. ')
+# 집합 자료형 set()응용 
+# 교집합 &
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+
+print(s1 & s2)
+#s1.intersection(s2) 위 코드와 동일한 결과
+
+# 합집합 |
+print(s1 | s2)
+#s1.union(s2) 위 코드와 동일한 결과
+
+# 차집합 -
+print(s1 - s2) # s1을 기준으로 값이 정해짐
+print(s2 - s1) # s2를 기준으로 값이 정해짐
+
+# add() : 집합 자료형에 값 한 개 추가
+s1 = set([1,2,3])
+s1.add(4)
+print(s1)
+
+# update() : 집합 자료형에 값 여러개 추가
+s1.update([4,5,6,7])
+print(s1)
+
+# 특정 값 제거하기(remove)
+s1 = set([1,2,3])
+s1.remove(3)
+print(s1)
+
+print('23. ')
+# 자료형의 참과 거짓
+# 숫자형
+# true : 0, false : 1
+# 나머지 자료형
+# true : 값 존재 할 때, false : 값이 존재하지 않을 때
+
+a = [1,2,3,4]
+while a :
+    print(a.pop()) # pop() : 요소를 끄집어내는 함수
+
+if set([]):
+    print("True")
+else:
+    print("False")
+
+if {1 : 'one', 2 : 'two', 3 : 'three'}:
+    print("True")
+else:
+    print("False")
+
+print('24. ')
+# 변수를 만드는 여러가지 방법
+
+a, b = ('park', 'sooho')
+print(a) # park
+print(b) # sooho
+
+(a, b) = '박', '수호' # 튜플은 괄호를 생략해도됨
+print(a) # 박
+print(b) # 수호
+
+[a, b] = ['python', 'life']
+print(a, b)
+
+a = b = 'park'
+print(a)
+print(b)
+print(a,b)
+
+print('25. ')
+# 변수의 값 바꾸기
+a = 3
+b = 5
+a, b = b, a
+print(a) # 5
+print(b) # 3
+
+print('26. ')
+# del(변수) : 메모리에 생성된 변수 없애기 
+a = 7
+b = 9
+print(a,b)
+
+del(a)
+#print(a) 오류 출력
+
+print('27. ')
+# 리스트를 변수에 넣고 복사
+a = [1,2,3,4]
+b = a       # b와 a가 같은 리스트인 [1,2,3,4]를 가리키는 상태
+a.append(5) # 변화가 두개의 변수에 같이 적용됨
+print(b)
+
+a[1]
+print(b)
