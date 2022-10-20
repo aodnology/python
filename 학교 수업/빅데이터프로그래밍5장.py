@@ -59,3 +59,4 @@ class Service3:
 sooho = Service3()
 sooho.setname("박수호")
 sooho.sum(2,3)
+
