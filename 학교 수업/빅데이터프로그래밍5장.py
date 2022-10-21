@@ -74,8 +74,8 @@ sooho.sum(2,3)
 #setname을 통해 그 사람의 이름을 부여하는 과정이 끝남
 
 print('1-5. __init__')
-babo = Service()
-babo.sum(1, 1)
+# babo = Service()
+# babo.sum(1, 1)
 # 위와 같이 입력하면 babo.setname("나바보")와 같은 이름을 넣어 주는 과정이 생략되어 문제가 생긴다
 # 아이디를 부여할때 그 사람의 이름을 입력 받아야만 아이디를 부여해 주는 방식으로 바꾸면
 # setname 함수를 이용하는 과정을 생략할 수 있다.(__init__의 역할)
