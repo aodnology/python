@@ -95,5 +95,3 @@ sooho.sum(1, 1)
 # sooho.setname("박수호") 
 # 위 코드가
 # sooho = Service4("박수호") 로 대입가능하게 됨
-
-# 클래스의 구조
