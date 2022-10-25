@@ -8,8 +8,8 @@ import plotly.graph_objects as go
 
 
 # 데이터를 가져올 날짜 설정
-start_date = datetime(2020,9,14)
-end_date = datetime(2021,9,14)
+start_date = datetime(2022,1,1)
+end_date = datetime(2022,10,26)
 
 # 야후에서 삼성전자 데이터 가져오기
 samsung = data.get_data_yahoo("005930.ks", start_date, end_date)
