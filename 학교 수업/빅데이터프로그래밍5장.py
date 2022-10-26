@@ -98,16 +98,112 @@ sooho.sum(1, 1)
 
 print('1-6. 사칙연산 클래스 만들기')
 # 아무 기능 없는 빈 클래스
-class FourCal:
+class FourCal1:
     pass
 
-a = FourCal() # 빈클래스도 객체를 만들 수 있다.
+a = FourCal1() # 빈클래스도 객체를 만들 수 있다.
 print(type(a))
 
 #객체에 숫자 지정할 수 있게 만들기
 class FourCal2:
+    def setdata(self, first, second): # Fourcal2 클래스에 setdata 함수 생성
+        self.first = first            # 클래스해서 함수를 다른말로 [메소드]라고도 함.
+        self.second = second
+
+a = FourCal2()
+a.setdata(4, 2)
+# [ self : a ](객체) , [ first : 4 ] , [second : 2]
+# setdata의 입력 인수는 self, first, second로 총 3개이지만 a.setdata(4, 2)처럼
+# 2개의 입력값만 주어도 a라는 인스턴스가 setdata 함수의 첫 번째 입력은 받는 변수인 self에 대입 됨
+
+print('2. 메소드의 다른 호출 방법')
+
+#[클래스명].[메소드]([객체],[인수],[인수])
+
+FourCal2.setdata(a, 4, 2)
+# 1. [클래스명].[메소드] 형태로 호출할 때 
+#     :객체 a를 입력 인수로 반드시 self자리에 넣어줘야 함
+
+a.setdata(4, 2)
+# 2. [객체].[메소드] 형태로 호출할 때는 
+#    :첫 번째 입력 인수(self)를 반드시 생략해야함
+
+print('2-2. 메소드의 수행문')
+# setdata 메소드의 수행문
+class FourCal3:
+    def setdata(self, first, second): # Fourcal2 클래스에 setdata 함수 생성
+        self.first = first            # 클래스해서 함수를 다른말로 [메소드]라고도 함.
+        self.second = second
+
+# 위 클래스에서 setdata 메소드의 수행문 구조 파악
+a = FourCal3()
+a.setdata(4, 2)
+
+# 위와 같이 대입을 했을때
+# self.first = 4
+# self.second = 2
+
+# a.setdata(4, 2) : [객체].[메소드](인수, 인수)
+# 형태 이므로
+# a.first = 4
+# a.second =2 
+# 임을 알 수 있다.
+
+print(a.first)  #4
+print(a.second) #2
+
+b = FourCal3()
+b.setdata(5,3)
+print(b.first)  #5
+print(b.second) #3
+
+# a와 b라는 객체 모두 first라는 변수를 가지고 있지만
+# 변수의 값은 각기 다르다 (객체간 변수가 같아도 서로 영향을 받지 않음)
+
+print('2-3. 더하기 기능 만들기')
+
+class FourCal4:
     def setdata(self, first, second):
         self.first = first
         self.second = second
+    def sum(self):
+        result = self.first + self.second
+        return result
 
-        
+FourCal4.setdata(a, 4, 2)
+# ==
+a = FourCal4()
+a.setdata(4,2)
+print(a.sum())
+
+# 클래스 안에 함수를 사용하기 위해선
+# 객체에 클래스를 대입시켜 주어야함
+
+print('2-4. 사칙연산')
+class FourCal:
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+    def sum(self):
+        res = self.first + self.second
+        return res
+    def mul(self):
+        res = self.first * self.second
+        return res
+    def sub(self):
+        res = self.first - self.second
+        return res    
+    def div(self):
+        res = self.first / self.second
+        return res
+
+# [결과] = [객체.인수] [연산식] [객체.인수]
+
+a = FourCal()
+a.setdata(4,2)
+print(a.sum())
+print(a.mul())
+print(a.sub())
+print(a.div()) 
+#print(type(a.div())) 
+# #나누기의 경우 자동으로 float으로 type이 변하는지 물어보기
