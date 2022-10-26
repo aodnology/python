@@ -95,3 +95,19 @@ sooho.sum(1, 1)
 # sooho.setname("박수호") 
 # 위 코드가
 # sooho = Service4("박수호") 로 대입가능하게 됨
+
+print('1-6. 사칙연산 클래스 만들기')
+# 아무 기능 없는 빈 클래스
+class FourCal:
+    pass
+
+a = FourCal() # 빈클래스도 객체를 만들 수 있다.
+print(type(a))
+
+#객체에 숫자 지정할 수 있게 만들기
+class FourCal2:
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+
+        
