@@ -57,6 +57,4 @@ class Service3:
         print("%s님 %s + %s = %s입니다." %(self.name, a, b, result))
 
 sooho = Service3()
-sooho.setname("박수호")
 sooho.sum(2,3)
-
