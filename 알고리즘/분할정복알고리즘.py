@@ -1,3 +1,6 @@
+# 합병정렬 알고리즘
+
+
 def merge_sort(arr):
     if len(arr) < 2:
         return arr
