@@ -1,3 +1,6 @@
+from re import A
+
+
 def quick_sort(arr):
     def sort(low, high):
         if high <= low:
@@ -20,3 +23,8 @@ def quick_sort(arr):
         return low
 
     return sort(0, len(arr) - 1)
+
+
+
+
+print(quick_sort([10,3,20,50,1,6,8,9,60,7,70,5,80,4,90,2,100]))
