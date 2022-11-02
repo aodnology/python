@@ -208,4 +208,4 @@ print(a.div())
 #print(type(a.div())) 
 # #나누기의 경우 자동으로 float으로 type이 왜 변하는지 물어보기
 
-
+print('3. house')
