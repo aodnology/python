@@ -11,8 +11,8 @@ class userInfo:
         print("이름 : {}, 나이 : {}, 주소 : {} 입니다.".format(self.name, self.age, self.addr))
 
 
-a = userInfo()
-a.show()
+# a = userInfo()
+# a.show()
 
 #클래스 상속 (pass) : 클래스 안에 함수 내용 비우기
 class userInfo2(userInfo): # class 클래스명(상속받는클래스명)
@@ -20,7 +20,7 @@ class userInfo2(userInfo): # class 클래스명(상속받는클래스명)
         pass               # 덮어쓴 상태에서 pass를 선언 했기 때문에 아무것도 없는 내용이 됨.
         print("깡통")       # 추후 클래스 안에 특정 함수의 내용만 새로운 클래스에 상속하고 싶을 때 사용하면 될 것 같음.
 
-b = userInfo2()
+# b = userInfo2()
 
 # 클래스 상속 (super)
 class userInfo3(userInfo):
