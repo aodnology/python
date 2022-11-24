@@ -28,12 +28,12 @@ for i in data:
     # link = title['href']
     print(title.text)
 
-data2 = soup.select('ul.type06') 
-#print(len(data2))
-for i in data2:
-    temp = i.select('dt>a') 
-    for t in temp:
-        print(t.text)
+# data2 = soup.select('ul.type06') 
+# #print(len(data2))
+# for i in data2:
+#     temp = i.select('dt>a') 
+#     for t in temp:
+#         print(t.text)
 
 time.sleep(1)
 driver.quit()

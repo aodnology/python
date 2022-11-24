@@ -1,30 +1,29 @@
-from re import A
+array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
 
-
-def quick_sort(arr):
-    def sort(low, high):
-        if high <= low:
-            return
-
-        mid = partition(low, high)
-        sort(low, mid - 1)
-        sort(mid, high)
-
-    def partition(low, high):
-        pivot = arr[(low + high) // 2]
-        while low <= high:
-            while arr[low] < pivot:
-                low += 1
-            while arr[high] > pivot:
-                high -= 1
-            if low <= high:
-                arr[low], arr[high] = arr[high], arr[low]
-                low, high = low + 1, high - 1
-        return low
-
-    return sort(0, len(arr) - 1)
-
-
-
-
-print(quick_sort([10,3,20,50,1,6,8,9,60,7,70,5,80,4,90,2,100]))
+def quick_sort(array, start, end):
+    if start >= end:
+        return
+    pivot = start #피벗 초기값은 첫번째 요소
+    left = start+1
+    right = end
+    
+    while left <= right:
+        # 피벗보다 큰 데이터를 찾을 때까지 반복
+        while left <= end and array[left] <= array[pivot]:
+            left+=1
+            
+            #피벗보다 작은 데이터를 찾을 때까지 반복
+        while right > start and array[right] >= array[pivot]:
+            right-=1
+            
+        if left>right: # 엇갈렸다면 작은 right -=1 데이터와 피벗을 교체
+            array[right], array[pivot] = array[pivot], array[right]
+            
+        else: # 엇갈리지 않았다면 작은 데이터와 큰 데이터를 교체 
+            array[left], array[right] = array[right], array[left]
+            
+    # 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행
+    quick_sort(array, start, right-1)
+    quick_sort(array, right+1, end)
+    
+quick_sort(array, 0, len(array)-1)
