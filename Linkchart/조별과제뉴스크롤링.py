@@ -9,6 +9,8 @@ startdate = input('시작 날짜 (yyyy.mm.dd) : ')
 lastdate = input('종료 날짜 (yyyy.mm.dd) : ')
 
 # 십의 자리와 일의 자리 더하기 (page 번호 처리)
+
+
 def solution(n):
     answer = 0
     n = list(map(int, str(n)))
@@ -16,6 +18,7 @@ def solution(n):
     for i in range(len(n)):
         answer += n[i]
     return answer
+
 
 # 크롤링
 for num in range(1, 151, 10):

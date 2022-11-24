@@ -33,4 +33,4 @@ bubblesort(arr)
 
 print('정렬 결과 :', end=" ")
 for i in range(len(arr)):
-    print("[%d" %arr[i], end ="]",)
+    print("[%d" %arr[i], end ="]")

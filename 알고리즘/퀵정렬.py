@@ -1,5 +1,3 @@
-array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
-
 def quick_sort(array, start, end):
     if start >= end:
         return
@@ -26,4 +24,5 @@ def quick_sort(array, start, end):
     quick_sort(array, start, right-1)
     quick_sort(array, right+1, end)
     
+array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]    
 quick_sort(array, 0, len(array)-1)

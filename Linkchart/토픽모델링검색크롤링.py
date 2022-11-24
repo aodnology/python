@@ -1,18 +1,15 @@
-import os
-import sys
 import urllib.request
 import datetime
-import time
 import json
 
-client_id = "_OFyPAF90afrAMvMb1zP"
-client_secret = "S0fSrEpNHR"
+id = "_OFyPAF90afrAMvMb1zP"
+secret = "S0fSrEpNHR"
 
 #[CODE 1]
 def getRequestUrl(url):
     req = urllib.request.Request(url)
-    req.add_header("X-Naver-Client-Id", client_id)
-    req.add_header("X-Naver-Client-Secret", client_secret)
+    req.add_header("X-Naver-Client-Id", id)
+    req.add_header("X-Naver-Client-Secret", secret)
     
     try:
         response = urllib.request.urlopen(req)
@@ -26,7 +23,7 @@ def getRequestUrl(url):
 
 #[CODE 2]
 def getNaverSearch(node, srcText, start, display):
-    base = "https://openapi.naver.com/v1/search/news"
+    base = "https://openapi.naver.com/v1/search"
     node = "/%s.json" % node
     parameters = "?query=%s&start=%s&display=%s" % (urllib.parse.quote(srcText), start, display)
 
@@ -45,7 +42,7 @@ def getPostData(post, jsonResult, cnt):
     org_link = post['originallink']
     link = post['link']
 
-    pDate = datetime.datetime.strptime(post['pubDate'], "%a, %d %b %Y %H:%M:%S+0900")
+    pDate = datetime.datetime.strptime(post['pubDate'], '%a, %d %b %Y %H:%M:%S +0900')
     pDate = pDate.strftime("%Y-%m-%d %H:%M:%S")
 
     jsonResult.append({'cnt':cnt, 'title':title, 'description':description,
@@ -72,7 +69,7 @@ def main():
         
     print('전체 검색 : %d 건' %total)
         
-    with open('%s_naver_%s.json' % (srcText, node), 'w', encoding='utf8') as outfile:
+    with open('%s.json' % srcText, 'w', encoding='utf-8') as outfile:
         jsonFile = json.dumps(jsonResult, indent=4, sort_keys = True, ensure_ascii = False)
             
         outfile.write(jsonFile)
